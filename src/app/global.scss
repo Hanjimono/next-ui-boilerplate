@@ -1,0 +1,8 @@
+@import "@/ui/constants/styles/globalColors.module.scss";
+@import "@/ui/constants/styles/globalSizes.module.scss";
+@import "@/ui/constants/styles/globalVariables.module.scss";
+
+html {
+  font-size: $MAIN_FONT_SIZE;
+  color: $MAIN_FONT_COLOR;
+}
