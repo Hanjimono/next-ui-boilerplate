@@ -11,7 +11,7 @@ const MENU = [
     items: [
       {
         title: "Text",
-        link: "/"
+        link: "/text"
       }
     ]
   },
