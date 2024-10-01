@@ -18,7 +18,9 @@ export default function TextPage() {
         screen.
       </Text>
       <Title size={3}>Usage</Title>
-      <Title size={5}>Sizes</Title>
+      <Title size={5} halfPadding>
+        Sizes
+      </Title>
       <Text type="paragraph">
         Text component provides a set of predefined sizes. It depends on the
         body font size. You can select it via props.
@@ -70,13 +72,15 @@ export default function TextPage() {
           </Beam>
         </Demo>
       </Beam>
-      <Title size={5}>Types</Title>
+      <Title size={5} halfPadding>
+        Types
+      </Title>
       <Text type="paragraph">
         Text component provides a set of predefined types. The plain type is
-        used for regular text. The paragraph type is used for text blocks,
-        devided from each other by a margin. And finally the fit-line type is
-        used for text, that should be displayed in one line and should not be
-        wrapped.
+        used for regular text. It's also a default type. The paragraph type is
+        used for text blocks, devided from each other by a margin. And finally
+        the fit-line type is used for text, that should be displayed in one line
+        and should not be wrapped.
       </Text>
       <Beam bottomGap withoutMargin>
         <Demo
@@ -125,9 +129,86 @@ export default function TextPage() {
             </Pillar>
             <Pillar sm={12} md={4}>
               <Text size={"default"} type="fit-line">
-                Fit-line text type with a very long text that should not be wrapped
+                Fit-line text type with a very long text that should not be
+                wrapped
               </Text>
             </Pillar>
+          </Beam>
+        </Demo>
+      </Beam>
+      <Title size={5} halfPadding>
+        Titles
+      </Title>
+      <Text type="paragraph">
+        You can use the title component to display text with a bigger font size.
+        There are 6 sizes available.
+      </Text>
+      <Beam bottomGap withoutMargin>
+        <Demo
+          code={`
+        <Beam><Title size={1}>This is a title with 1 size</Title></Beam>
+        <Beam><Title size={2}>This is a title with 2 (default) size</Title></Beam>
+        <Beam><Title size={3}>This is a title with 3 size</Title></Beam>
+        <Beam><Title size={4}>This is a title with 4 size</Title></Beam>
+        <Beam><Title size={5}>This is a title with 5 size</Title></Beam>
+        <Beam><Title size={6}>This is a title with 6 size</Title></Beam>`}
+        >
+          <Beam>
+            <Title size={1}>This is a title with 1 size</Title>
+          </Beam>
+          <Beam>
+            <Title size={2}>This is a title with 2 (default) size</Title>
+          </Beam>
+          <Beam>
+            <Title size={3}>This is a title with 3 size</Title>
+          </Beam>
+          <Beam>
+            <Title size={4}>This is a title with 4 size</Title>
+          </Beam>
+          <Beam>
+            <Title size={5}>This is a title with 5 size</Title>
+          </Beam>
+          <Beam>
+            <Title size={6}>This is a title with 6 size</Title>
+          </Beam>
+        </Demo>
+      </Beam>
+      <Text type="paragraph">
+        You can also define the alignment of the text and the padding via props.
+      </Text>
+      <Beam bottomGap withoutMargin>
+        <Demo
+          code={`
+        <Beam>
+          <Title size={3} align="center" noPadding>
+            Centered title, no padding
+          </Title>
+        </Beam>
+        <Beam>
+          <Title size={3} align="left" halfPadding>
+            Left aligned title, half padding
+          </Title>
+        </Beam>
+        <Beam>
+          <Title size={3} align="right">
+            Right aligned title, default padding
+          </Title>
+        </Beam>`}
+        >
+          <Beam>
+            <Title size={3} align="center" noPadding>
+              Centered title, no padding
+            </Title>
+          </Beam>
+          <Beam>
+            <Title size={3} align="left" halfPadding>
+              Left aligned title, half padding
+            </Title>
+          </Beam>
+          <Beam>
+            <Title size={3} align="right">
+              Right aligned title, default padding
+            </Title>
           </Beam>
         </Demo>
       </Beam>
