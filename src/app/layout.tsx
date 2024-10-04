@@ -33,7 +33,7 @@ export default function RootLayout({
       </head>
       <body className={openSans.className}>
         <Foundation>
-          <Beam withoutMargin withoutWrap whole>
+          <Beam withoutMargin withoutWrap whole withoutGap>
             <NavigationMenu />
             {children}
           </Beam>

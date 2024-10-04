@@ -3,6 +3,29 @@
 @import "@/ui/constants/styles/globalVariables.module.scss";
 
 html {
-  font-size: $MAIN_FONT_SIZE;
   color: $MAIN_FONT_COLOR;
+}
+
+@media (max-width: $extraSmallDevices) {
+  html {
+    font-size: $MAIN_FONT_SIZE_SMALL;
+  }
+}
+
+@media (min-width: $smallDevices) {
+  html {
+    font-size: $MAIN_FONT_SIZE_SMALL;
+  }
+}
+
+@media (min-width: $mediumDevices) {
+  html {
+    font-size: $MAIN_FONT_SIZE_MEDIUM;
+  }
+}
+
+@media (min-width: $largeDevices) {
+  html {
+    font-size: $MAIN_FONT_SIZE;
+  }
 }

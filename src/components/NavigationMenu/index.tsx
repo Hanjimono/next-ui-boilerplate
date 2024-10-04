@@ -1,9 +1,14 @@
 "use client"
+// system
+import { useState } from "react"
+import clsx from "clsx"
 // ui
-import Menu, { MenuCategory, MenuItem } from "@/ui/Navigation/Menu"
+import Menu from "@/ui/Navigation/Menu"
+import Beam from "@/ui/Layout/Beam"
 // styles and types
 import styles from "./styles.module.scss"
-import dynamic from "next/dynamic"
+import Button from "@/ui/Actions/Button"
+import Title from "@/ui/Presentation/Title"
 
 const MENU = [
   {
@@ -25,12 +30,37 @@ const MENU = [
   }
 ]
 
-const MenuProvider = dynamic(() => import("@/ui/Navigation/Menu"), {
-  ssr: false
-})
-
 // component with main navigation menu on the left side of every page
 function NavigationMenu() {
-  return <MenuProvider className={styles["main-menu"]} items={MENU} />
+  const [openMenu, setOpenMenu] = useState(false)
+  return (
+    <>
+      <div
+        className={clsx(styles["mobile-menu"], !openMenu && styles["active"])}
+      >
+        <Button
+          onClick={() => setOpenMenu(true)}
+          icon="menu"
+          text
+          iconSize={30}
+        />
+        <Title noPadding size={6}>
+          UI-boilerplate
+        </Title>
+      </div>
+      <div className={clsx(styles["main-menu"], openMenu && styles["active"])}>
+        <Button
+          className={styles["close-menu"]}
+          onClick={() => setOpenMenu(false)}
+          icon="close"
+          text
+          iconSize={22}
+        />
+        <Beam withoutMargin withoutWrap whole>
+          <Menu items={MENU} />
+        </Beam>
+      </div>
+    </>
+  )
 }
 export default NavigationMenu
