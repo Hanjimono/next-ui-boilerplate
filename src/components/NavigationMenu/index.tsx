@@ -24,7 +24,8 @@ const MENU = [
     title: "Actions",
     items: [
       {
-        title: "Button"
+        title: "Button",
+        link: "/button"
       }
     ]
   }
