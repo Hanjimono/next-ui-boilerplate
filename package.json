@@ -8,7 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "pretty": "npx prettier . --write",
-    "prepare-husky": "husky install .husky"
+    "prepare-husky": "npx husky init",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "dependencies": {
     "@types/js-cookie": "^3.0.6",
