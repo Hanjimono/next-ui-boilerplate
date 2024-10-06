@@ -78,10 +78,10 @@ export default function TextPage() {
       </Title>
       <Text type="paragraph">
         Text component provides a set of predefined types. The plain type is
-        used for regular text. It's also a default type. The paragraph type is
-        used for text blocks, devided from each other by a margin. And finally
-        the fit-line type is used for text, that should be displayed in one line
-        and should not be wrapped.
+        used for regular text. It&apos;s also a default type. The paragraph type
+        is used for text blocks, devided from each other by a margin. And
+        finally the fit-line type is used for text, that should be displayed in
+        one line and should not be wrapped.
       </Text>
       <Beam bottomGap>
         <Demo
