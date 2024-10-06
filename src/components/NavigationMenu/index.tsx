@@ -56,7 +56,7 @@ function NavigationMenu() {
           text
           iconSize={22}
         />
-        <Beam withoutMargin withoutWrap whole>
+        <Beam withoutWrap whole>
           <Menu items={MENU} />
         </Beam>
       </div>

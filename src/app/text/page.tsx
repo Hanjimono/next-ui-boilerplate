@@ -25,8 +25,9 @@ export default function TextPage() {
         Text component provides a set of predefined sizes. It depends on the
         body font size. You can select it via props.
       </Text>
-      <Beam bottomGap withoutMargin>
+      <Beam bottomGap>
         <Demo
+          whole
           code={`
         <Beam bottomGap>
           <Text size={"extra-small"} type="plain">
@@ -82,8 +83,9 @@ export default function TextPage() {
         the fit-line type is used for text, that should be displayed in one line
         and should not be wrapped.
       </Text>
-      <Beam bottomGap withoutMargin>
+      <Beam bottomGap>
         <Demo
+          whole
           code={`
           <Beam>
             <Pillar sm={12} md={4}>
@@ -143,8 +145,9 @@ export default function TextPage() {
         You can use the title component to display text with a bigger font size.
         There are 6 sizes available.
       </Text>
-      <Beam bottomGap withoutMargin>
+      <Beam bottomGap>
         <Demo
+          whole
           code={`
         <Beam><Title size={1}>This is a title with 1 size</Title></Beam>
         <Beam><Title size={2}>This is a title with 2 (default) size</Title></Beam>
@@ -176,8 +179,9 @@ export default function TextPage() {
       <Text type="paragraph">
         You can also define the alignment of the text and the padding via props.
       </Text>
-      <Beam bottomGap withoutMargin>
+      <Beam bottomGap>
         <Demo
+          whole
           code={`
         <Beam>
           <Title size={3} align="center" noPadding>
