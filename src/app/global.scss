@@ -6,26 +6,34 @@ html {
   color: $MAIN_FONT_COLOR;
 }
 
+input {
+  all: unset;
+}
+
 @media (max-width: $extraSmallDevices) {
   html {
     font-size: $MAIN_FONT_SIZE_SMALL;
+    line-height: $MAIN_FONT_SIZE_SMALL;
   }
 }
 
 @media (min-width: $smallDevices) {
   html {
     font-size: $MAIN_FONT_SIZE_SMALL;
+    line-height: $MAIN_FONT_SIZE_SMALL;
   }
 }
 
 @media (min-width: $mediumDevices) {
   html {
     font-size: $MAIN_FONT_SIZE_MEDIUM;
+    line-height: $MAIN_FONT_SIZE_MEDIUM;
   }
 }
 
 @media (min-width: $largeDevices) {
   html {
     font-size: $MAIN_FONT_SIZE;
+    line-height: $MAIN_FONT_SIZE;
   }
 }
