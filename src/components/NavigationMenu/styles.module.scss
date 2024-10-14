@@ -7,6 +7,11 @@
   max-width: 220px;
   height: 100%;
   background-color: $MENU_BACKGROUND;
+
+  .menu-logo {
+    padding: $DEFAULT_LISTS_OUTER_TOP_BOTTOM_PADDING
+      $DEFAULT_LISTS_OUTER_SIDES_PADDING;
+  }
 }
 
 .mobile-menu {
@@ -24,6 +29,7 @@
     top: 0;
     left: 0;
     z-index: $TOP_LEVEL_INDEX;
+
     &.active {
       display: block;
     }
@@ -45,6 +51,7 @@
     left: 0;
     right: 0;
     align-items: center;
+
     &.active {
       display: flex;
     }

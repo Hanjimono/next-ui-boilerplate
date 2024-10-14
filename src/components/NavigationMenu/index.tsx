@@ -9,6 +9,7 @@ import Beam from "@/ui/Layout/Beam"
 import styles from "./styles.module.scss"
 import Button from "@/ui/Actions/Button"
 import Title from "@/ui/Presentation/Title"
+import Logo from "../Logo"
 
 const MENU = [
   {
@@ -45,9 +46,7 @@ function NavigationMenu() {
           text
           iconSize={30}
         />
-        <Title noPadding size={6}>
-          UI-boilerplate
-        </Title>
+        <Logo className={styles["menu-logo"]} />
       </div>
       <div className={clsx(styles["main-menu"], openMenu && styles["active"])}>
         <Button
@@ -57,6 +56,7 @@ function NavigationMenu() {
           text
           iconSize={22}
         />
+        <Logo className={styles["menu-logo"]} />
         <Beam withoutWrap whole>
           <Menu items={MENU} />
         </Beam>

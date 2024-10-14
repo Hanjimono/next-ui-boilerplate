@@ -37,3 +37,9 @@ input {
     line-height: $MAIN_FONT_SIZE;
   }
 }
+
+@media (max-width: $mediumDevices) {
+  .main-content {
+    padding-top: 50px;
+  }
+}

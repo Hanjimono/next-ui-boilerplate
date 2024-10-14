@@ -36,7 +36,7 @@ export default function RootLayout({
         <Foundation>
           <Beam withoutWrap whole withoutGap>
             <NavigationMenu />
-            <Frame>{children}</Frame>
+            <Frame className="main-content">{children}</Frame>
           </Beam>
         </Foundation>
       </body>
