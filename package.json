@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.0",
     "@types/js-cookie": "^3.0.6",
     "clsx": "^2.1.1",
     "immer": "^10.1.1",
@@ -26,6 +27,7 @@
     "react-dom": "^19.0.0-rc-1460d67c-20241003",
     "react-hook-form": "^7.53.0",
     "tsc": "^2.0.4",
+    "yup": "^1.4.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
