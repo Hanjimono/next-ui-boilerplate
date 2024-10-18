@@ -5,34 +5,8 @@
 
 html {
   color: var(--colorTextMain);
-}
-
-@media (max-width: $extraSmallDevices) {
-  html {
-    font-size: var(--fontSizeSmall);
-    line-height: var(--fontSizeSmall);
-  }
-}
-
-@media (min-width: $smallDevices) {
-  html {
-    font-size: var(--fontSizeSmall);
-    line-height: var(--fontSizeSmall);
-  }
-}
-
-@media (min-width: $mediumDevices) {
-  html {
-    font-size: var(--fontSizeMedium);
-    line-height: var(--fontSizeMedium);
-  }
-}
-
-@media (min-width: $largeDevices) {
-  html {
-    font-size: var(--fontSize);
-    line-height: var(--fontSize);
-  }
+  font-size: var(--fontSize);
+  line-height: var(--fontSize);
 }
 
 @media (max-width: $mediumDevices) {
