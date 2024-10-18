@@ -1,6 +1,6 @@
 .logo-container {
   align-items: center;
-  gap: 5px;
+  gap: var(--spacingItemsOnSameLevel);
   h5 {
     width: fit-content;
     text-transform: uppercase;

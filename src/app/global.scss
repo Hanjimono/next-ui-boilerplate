@@ -1,40 +1,37 @@
 @import "@/ui/constants/styles/globalColors.module.scss";
 @import "@/ui/constants/styles/globalSizes.module.scss";
 @import "@/ui/constants/styles/globalVariables.module.scss";
+@import "@/ui/constants/styles/variables.scss";
 
 html {
-  color: $MAIN_FONT_COLOR;
-}
-
-input {
-  all: unset;
+  color: var(--colorTextMain);
 }
 
 @media (max-width: $extraSmallDevices) {
   html {
-    font-size: $MAIN_FONT_SIZE_SMALL;
-    line-height: $MAIN_FONT_SIZE_SMALL;
+    font-size: var(--fontSizeSmall);
+    line-height: var(--fontSizeSmall);
   }
 }
 
 @media (min-width: $smallDevices) {
   html {
-    font-size: $MAIN_FONT_SIZE_SMALL;
-    line-height: $MAIN_FONT_SIZE_SMALL;
+    font-size: var(--fontSizeSmall);
+    line-height: var(--fontSizeSmall);
   }
 }
 
 @media (min-width: $mediumDevices) {
   html {
-    font-size: $MAIN_FONT_SIZE_MEDIUM;
-    line-height: $MAIN_FONT_SIZE_MEDIUM;
+    font-size: var(--fontSizeMedium);
+    line-height: var(--fontSizeMedium);
   }
 }
 
 @media (min-width: $largeDevices) {
   html {
-    font-size: $MAIN_FONT_SIZE;
-    line-height: $MAIN_FONT_SIZE;
+    font-size: var(--fontSize);
+    line-height: var(--fontSize);
   }
 }
 

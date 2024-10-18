@@ -1,16 +1,13 @@
-@import "@/ui/constants/styles/globalColors.module.scss";
 @import "@/ui/constants/styles/globalSizes.module.scss";
-@import "@/ui/constants/styles/globalVariables.module.scss";
 
 .main-menu {
   min-width: 220px;
   max-width: 220px;
   height: 100%;
-  background-color: $MENU_BACKGROUND;
+  background-color: var(--colorBackgroundMenu);
 
   .menu-logo {
-    padding: $DEFAULT_LISTS_OUTER_TOP_BOTTOM_PADDING
-      $DEFAULT_LISTS_OUTER_SIDES_PADDING;
+    padding: var(--spacingListOutTop) var(--spacingListOutSides);
   }
 }
 
@@ -28,7 +25,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: $TOP_LEVEL_INDEX;
+    z-index: var(--zIndexTop);
 
     &.active {
       display: block;
@@ -43,8 +40,8 @@
   }
 
   .mobile-menu {
-    background-color: $MENU_BACKGROUND;
-    z-index: $SELECT_LEVEL_INDEX;
+    background-color: var(--colorBackgroundMenu);
+    z-index: var(--zIndexSelect);
     display: none;
     position: fixed;
     top: 0;
