@@ -9,7 +9,9 @@ import {
 } from "@/ui/Form/FormElementWrapper"
 import FormSubmit from "@/ui/Form/FormSubmit"
 import Input from "@/ui/Form/Input"
+import Radio, { RadioItem } from "@/ui/Form/Radio"
 import Select from "@/ui/Form/Select"
+import Switch from "@/ui/Form/Switch"
 import Beam from "@/ui/Layout/Beam"
 import Wall from "@/ui/Layout/Wall"
 import Text from "@/ui/Presentation/Text"
@@ -45,7 +47,8 @@ export default function MainPage() {
       test2: yup.number().min(10),
       test4: yup.string().required(),
       testSelect: yup.number().required(),
-      checkbox1: yup.mixed().oneOf(["partial", true, false])
+      checkbox1: yup.mixed().oneOf(["partial", true, false]),
+      radio1: yup.number().required()
     })
     .required()
   return (
@@ -55,6 +58,7 @@ export default function MainPage() {
       </Title>
       <Title>This is a ui-boilerplate for NEXT.js with some ui-kit</Title>
       <Form
+        defaultValues={{ test1: "test", checkbox1: "partial", radio1: 1 }}
         onSubmit={(data) => console.log(data)}
         onInvalidSubmit={(error) => console.log("error", error)}
         validationSchema={validationSchema}
@@ -66,7 +70,7 @@ export default function MainPage() {
           label="name"
           type="text"
           placeholder="Type something"
-          icon="search"
+          disabled
           clearable
         />
         <Input
@@ -77,6 +81,7 @@ export default function MainPage() {
           filled
           icon="search"
         />
+        <Switch name="switchTest" label="night theme" />
         <Input
           sm={12}
           name="test3"
@@ -94,6 +99,14 @@ export default function MainPage() {
           placeholder="Type something"
           filled
           labelOnTop
+        />
+        <Radio
+          name="radio1"
+          options={[
+            { title: "Test 1", value: 1 },
+            { title: "Test 2", value: 2 }
+          ]}
+          disabled
         />
         <Select
           sm={12}
