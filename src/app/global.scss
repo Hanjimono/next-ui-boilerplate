@@ -9,6 +9,9 @@ html {
   line-height: var(--fontSize);
 }
 
+body {
+  overflow: hidden;
+}
 /* custom scrollbar */
 ::-webkit-scrollbar {
   width: 20px;
