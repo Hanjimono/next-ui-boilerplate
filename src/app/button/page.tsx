@@ -1,7 +1,7 @@
 // system
 import React from "react"
 // ui
-import Wall from "@/ui/Layout/Wall"
+import { DecoratedWall } from "@/ui/Layout/Wall"
 import Title from "@/ui/Presentation/Title"
 import Text from "@/ui/Presentation/Text"
 import Demo from "@/ui/Presentation/Demo"
@@ -11,7 +11,7 @@ import Button from "@/ui/Actions/Button"
 
 export default function ButtonPage() {
   return (
-    <Wall>
+    <DecoratedWall>
       <Title size={1}>Button Component</Title>
       <Title size={3}>Description</Title>
       <Text type="paragraph">
@@ -165,6 +165,6 @@ export default function ButtonPage() {
           </Beam>
         </Demo>
       </Beam>
-    </Wall>
+    </DecoratedWall>
   )
 }
