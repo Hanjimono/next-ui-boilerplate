@@ -14,6 +14,7 @@ import Select from "@/ui/Form/Select"
 import Switch from "@/ui/Form/Switch"
 import Beam from "@/ui/Layout/Beam"
 import Wall from "@/ui/Layout/Wall"
+import WallDecorated from "@/ui/Layout/Decorators/WallDecorated"
 import Text from "@/ui/Presentation/Text"
 import Title from "@/ui/Presentation/Title"
 import { useForm, useFormContext } from "react-hook-form"
@@ -52,7 +53,7 @@ export default function MainPage() {
     })
     .required()
   return (
-    <Wall>
+    <WallDecorated>
       <Title size={1} uppercase>
         Ui-boilerplate
       </Title>
@@ -151,7 +152,7 @@ export default function MainPage() {
         Proin in nisi nec nunc scelerisque ultricies. Nullam nec turpis sit amet
         nunc consectetur ultricies. Sed et eros eget or
       </Text>
-    </Wall>
+    </WallDecorated>
   )
 }
 

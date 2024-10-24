@@ -1,16 +1,16 @@
 // system
 import React from "react"
 // ui
-import Wall, { DecoratedWall } from "@/ui/Layout/Wall"
 import Title from "@/ui/Presentation/Title"
 import Text from "@/ui/Presentation/Text"
 import Demo from "@/ui/Presentation/Demo"
 import Beam from "@/ui/Layout/Beam"
 import Pillar from "@/ui/Layout/Pillar"
+import WallDecorated from "@/ui/Layout/Decorators/WallDecorated"
 
 export default function TextPage() {
   return (
-    <DecoratedWall>
+    <WallDecorated>
       <Title size={1}>Text Component</Title>
       <Title size={3}>Description</Title>
       <Text type="paragraph">
@@ -216,6 +216,6 @@ export default function TextPage() {
           </Beam>
         </Demo>
       </Beam>
-    </DecoratedWall>
+    </WallDecorated>
   )
 }
