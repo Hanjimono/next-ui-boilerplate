@@ -1,13 +1,14 @@
 // components
 import NavigationMenu from "@/components/NavigationMenu"
+import Initializer from "@/components/Helpers/Initializer"
 // constants
 import { openSans } from "@/constants/fonts"
 // ui
 import Foundation from "@/ui/Layout/Foundation"
-// types and styles
-import "./global.scss"
 import Beam from "@/ui/Layout/Beam"
 import Frame from "@/ui/Layout/Frame"
+// types and styles
+import "./global.scss"
 
 export const metadata = {
   title: "ui-boilerplate",
@@ -39,6 +40,7 @@ export default function RootLayout({
             <Frame className="main-content">{children}</Frame>
           </Beam>
         </Foundation>
+        <Initializer />
       </body>
     </html>
   )
