@@ -1,8 +1,10 @@
 import AlertModal from "@/modals/Helpers/Alert"
+import ConfirmModal from "@/modals/Helpers/Confirm"
 
 /** List of all modals */
 export const MODAL_LIST = {
-  alert: AlertModal
+  alert: AlertModal,
+  confirm: ConfirmModal
 }
 
 /** All available modals names */

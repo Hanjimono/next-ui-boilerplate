@@ -1,12 +1,16 @@
 import { AlertModalProps } from "@/modals/Helpers/Alert/types"
 import { ModalName } from "@/constants/modalList"
+import { ConfirmModalProps } from "@/modals/Helpers/Confirm/types"
 
 /**
  * Props that can be used in any modal but will be passed to the wrapper component
  */
 export interface DefaultModalContainerProps {
+  /** Removes mask from the modal */
   withoutMask?: boolean
+  /** Function is called when the modal is closed */
   onClose?: () => void
+  /** If true, modal can't be closed by clicking on the mask */
   isNotClosable?: boolean
 }
 
@@ -14,8 +18,11 @@ export interface DefaultModalContainerProps {
  * Props that can be used in any modal
  */
 export interface DefaultModalProps {
+  /** Type of the modal */
   type: ModalName
+  /** Function for closing the modal */
   onClose: () => void
+  /** Title of the modal */
   title?: string
 }
 
@@ -33,4 +40,5 @@ type ModalPropsForStore<T extends DefaultModalProps> = Omit<
  */
 export interface ModalStoreInterfaceMap {
   alert: DefaultModalContainerProps & ModalPropsForStore<AlertModalProps>
+  confirm: DefaultModalContainerProps & ModalPropsForStore<ConfirmModalProps>
 }

@@ -48,6 +48,14 @@ export interface ModalState {
    * @param props - Optional properties to pass to the alert modal.
    */
   alert: (text: string, props?: ModalStoreInterfaceMap["alert"]) => void
+
+  /**
+   * Displays a confirm modal with the specified text and optional properties.
+   *
+   * @param text - The text to display in the confirm modal.
+   * @param props - Optional properties to pass to the confirm modal.
+   */
+  confirm: (text: string, props?: ModalStoreInterfaceMap["confirm"]) => void
 }
 
 /**
@@ -93,5 +101,17 @@ export const createModalStore: StateCreator<ModalState> = (set, get) => ({
     alertProps.text = text
     alertProps.title = alertProps.title || "Warning!"
     get().openModal("alert", alertProps)
+  },
+  confirm: (text, props = {}) => {
+    let confirmProps = { ...props }
+    if (!confirmProps) {
+      confirmProps = {
+        text
+      }
+    }
+    confirmProps.text = text
+    confirmProps.title = confirmProps.title || "Confirm action"
+    confirmProps.isNotClosable = true
+    get().openModal("confirm", confirmProps)
   }
 })
