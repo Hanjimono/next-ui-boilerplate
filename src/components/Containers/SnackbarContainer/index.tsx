@@ -28,17 +28,20 @@ export default function SnackbarContainer() {
   const listOfSnackbars = useMemo(() => {
     return Object.entries(listOfOpenSnackbar).map(
       ([snackbarKey, snackbar], idx) => {
-        const { message, type, duration, isClosing } = snackbar
+        const { message, type, duration, isClosing, title } = snackbar
         const onClose = () => handleCloseModal(snackbarKey)
         return (
           <AnimatePresence key={snackbarKey} mode="wait">
             {!isClosing && (
               <Snackbar
                 type={type}
+                title={title}
                 duration={duration ? duration * 1000 : undefined}
                 onClose={onClose}
                 closable={type !== "critical"}
-                isFirst={idx === 0}
+                isFirst={
+                  idx === 0 && Object.entries(listOfOpenSnackbar).length <= 1
+                }
               >
                 {message} + + {snackbarKey}
               </Snackbar>

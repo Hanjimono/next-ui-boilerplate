@@ -8,6 +8,7 @@ import { SnackbarType } from "@/ui/Navigation/Snackbar/types"
 interface Snackbar {
   message: string
   type: SnackbarType
+  title?: string
   duration?: number
   isClosing?: boolean
 }
@@ -26,9 +27,15 @@ export interface SnackbarState {
    *
    * @param message - The message to display in the snackbar.
    * @param type - The type of the snackbar (optional).
+   * @param title - The title of the snackbar (optional).
    * @param duration - The duration for which the snackbar should be displayed (optional).
    */
-  snack: (message: string, type?: SnackbarType, duration?: number) => void
+  snack: (
+    message: string,
+    type?: SnackbarType,
+    title?: string,
+    duration?: number
+  ) => void
 
   /**
    * Delays the closing of a snackbar with the given ID.
@@ -53,33 +60,36 @@ export interface SnackbarState {
    * Displays an error snackbar with the given message and duration.
    *
    * @param message - The error message to display in the snackbar.
+   * @param title - The title of the snackbar (optional).
    * @param duration - The duration for which the snackbar should be displayed (optional).
    */
-  errorSnack: (message: string, duration?: number) => void
+  errorSnack: (message: string, title?: string, duration?: number) => void
 
   /**
    * Displays a success snackbar with the given message and duration.
    *
    * @param message - The success message to display in the snackbar.
+   * @param title - The title of the snackbar (optional).
    * @param duration - The duration for which the snackbar should be displayed (optional).
    */
-  successSnack: (message: string, duration?: number) => void
+  successSnack: (message: string, title?: string, duration?: number) => void
 
   /**
    * Displays a critical error snackbar with the given message.
    *
    * @param message - The critical message to display in the snackbar.
+   * @param title - The title of the snackbar (optional).
    */
-  criticalSnack: (message: string) => void
+  criticalSnack: (message: string, title?: string) => void
 }
 
 export const createSnackbarStore: StateCreator<SnackbarState> = (set, get) => ({
   listOfOpenSnackbar: {},
-  snack: (message, type = "info", duration = 8) => {
+  snack: (message, type = "info", title, duration = 8) => {
     const id = Date.now().toString()
     set(
       produce((state) => {
-        state.listOfOpenSnackbar[id] = { message, type, duration }
+        state.listOfOpenSnackbar[id] = { message, type, duration, title }
       })
     )
     return id
@@ -110,13 +120,13 @@ export const createSnackbarStore: StateCreator<SnackbarState> = (set, get) => ({
       })
     )
   },
-  errorSnack: (message, duration) => {
-    return get().snack(message, "warning", duration)
+  errorSnack: (message, title, duration) => {
+    return get().snack(message, "warning", title, duration)
   },
-  successSnack: (message, duration) => {
-    return get().snack(message, "success", duration)
+  successSnack: (message, title, duration) => {
+    return get().snack(message, "success", title, duration)
   },
-  criticalSnack: (message) => {
-    return get().snack(message, "critical")
+  criticalSnack: (message, title) => {
+    return get().snack(message, "critical", title)
   }
 })
