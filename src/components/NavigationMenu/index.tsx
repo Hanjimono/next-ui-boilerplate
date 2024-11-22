@@ -16,6 +16,10 @@ const MENU = [
     title: "Presentation",
     items: [
       {
+        title: "Home",
+        link: "/"
+      },
+      {
         title: "Text",
         link: "/text"
       }
@@ -58,7 +62,7 @@ function NavigationMenu() {
         />
         <Logo className={styles["menu-logo"]} />
         <Beam withoutWrap whole>
-          <Menu items={MENU} />
+          <Menu className="w-full" items={MENU} />
         </Beam>
       </div>
     </>
