@@ -96,7 +96,11 @@ export const config = {
           900: "#07090b"
         },
         menu: "#11151d",
-        form: "#1b252c",
+        form: {
+          main: "#1b252c",
+          disabled: "rgb(17 24 39)",
+          border: "#e5e7eb"
+        },
         mask: "#212d42"
       },
       zIndex: {
