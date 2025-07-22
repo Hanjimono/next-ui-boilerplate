@@ -6,7 +6,6 @@ import clsx from "clsx"
 import Menu from "@/ui/Navigation/Menu"
 import Beam from "@/ui/Layout/Beam"
 // styles and types
-import styles from "./styles.module.scss"
 import Button from "@/ui/Actions/Button"
 import Title from "@/ui/Presentation/Title"
 import Logo from "../Logo"
@@ -41,26 +40,23 @@ function NavigationMenu() {
   const [openMenu, setOpenMenu] = useState(false)
   return (
     <>
-      <div
-        className={clsx(styles["mobile-menu"], !openMenu && styles["active"])}
-      >
+      <div>
         <Button
           onClick={() => setOpenMenu(true)}
           icon="menu"
           text
           iconSize={30}
         />
-        <Logo className={styles["menu-logo"]} />
+        <Logo />
       </div>
-      <div className={clsx(styles["main-menu"], openMenu && styles["active"])}>
+      <div>
         <Button
-          className={styles["close-menu"]}
           onClick={() => setOpenMenu(false)}
           icon="close"
           text
           iconSize={22}
         />
-        <Logo className={styles["menu-logo"]} />
+        <Logo />
         <Beam withoutWrap whole>
           <Menu className="w-full" items={MENU} />
         </Beam>
