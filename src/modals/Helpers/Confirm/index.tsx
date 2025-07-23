@@ -49,7 +49,7 @@ function ConfirmModal({
   }
   return (
     <Modal title={title} className={calculatedClassNames}>
-      <Room bottomGap>
+      <Room>
         <Text>{text}</Text>
       </Room>
       <Beam>

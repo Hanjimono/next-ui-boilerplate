@@ -18,28 +18,26 @@ export default function TextPage() {
         screen.
       </Text>
       <Title size={3}>Usage</Title>
-      <Title size={5} halfPadding>
-        Sizes
-      </Title>
+      <Title size={5}>Sizes</Title>
       <Text type="paragraph">
         Text component provides a set of predefined sizes. It depends on the
         body font size. You can select it via props.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
-        <Beam bottomGap>
+        <Beam>
           <Text size={"extra-small"} type="plain">
             Extra-small text size
           </Text>
         </Beam>
-        <Beam bottomGap>
+        <Beam>
           <Text size={"small"} type="plain">
             Small text size
           </Text>
         </Beam>
-        <Beam bottomGap>
+        <Beam>
           <Text size={"default"} type="plain">
             Default text size
           </Text>
@@ -51,17 +49,17 @@ export default function TextPage() {
         </Beam>
           `}
         >
-          <Beam bottomGap>
+          <Beam>
             <Text size={"extra-small"} type="plain">
               Extra-small text size
             </Text>
           </Beam>
-          <Beam bottomGap>
+          <Beam>
             <Text size={"small"} type="plain">
               Small text size
             </Text>
           </Beam>
-          <Beam bottomGap>
+          <Beam>
             <Text size={"default"} type="plain">
               Default text size
             </Text>
@@ -73,9 +71,7 @@ export default function TextPage() {
           </Beam>
         </Demo>
       </Beam>
-      <Title size={5} halfPadding>
-        Types
-      </Title>
+      <Title size={5}>Types</Title>
       <Text type="paragraph">
         Text component provides a set of predefined types. The plain type is
         used for regular text. It&apos;s also a default type. The paragraph type
@@ -83,7 +79,7 @@ export default function TextPage() {
         finally the fit-line type is used for text, that should be displayed in
         one line and should not be wrapped.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
@@ -138,14 +134,12 @@ export default function TextPage() {
           </Beam>
         </Demo>
       </Beam>
-      <Title size={5} halfPadding>
-        Titles
-      </Title>
+      <Title size={5}>Titles</Title>
       <Text type="paragraph">
         You can use the title component to display text with a bigger font size.
         There are 6 sizes available.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
@@ -179,7 +173,7 @@ export default function TextPage() {
       <Text type="paragraph">
         You can also define the alignment of the text and the padding via props.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
@@ -189,7 +183,7 @@ export default function TextPage() {
           </Title>
         </Beam>
         <Beam>
-          <Title size={3} align="left" halfPadding>
+          <Title size={3} align="left">
             Left aligned title, half padding
           </Title>
         </Beam>
@@ -200,12 +194,12 @@ export default function TextPage() {
         </Beam>`}
         >
           <Beam>
-            <Title size={3} align="center" noPadding>
+            <Title size={3} align="center">
               Centered title, no padding
             </Title>
           </Beam>
           <Beam>
-            <Title size={3} align="left" halfPadding>
+            <Title size={3} align="left">
               Left aligned title, half padding
             </Title>
           </Beam>

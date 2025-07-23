@@ -35,7 +35,7 @@ export default function RootLayout({
       </head>
       <body className={openSans.className}>
         <Foundation>
-          <Beam withoutWrap whole withoutGap>
+          <Beam withoutWrap whole>
             <NavigationMenu />
             <Frame className="main-content">{children}</Frame>
           </Beam>

@@ -63,7 +63,6 @@ export default function MainPage() {
         onSubmit={(data) => console.log(data)}
         onInvalidSubmit={(error) => console.log("error", error)}
         validationSchema={validationSchema}
-        bottomGap
       >
         <Input
           sm={12}
@@ -89,7 +88,6 @@ export default function MainPage() {
           label="name"
           type="text"
           placeholder="Type something"
-          noAnimation
         />
         <Checkbox name="checkbox1" label="Checkbox test" />
         <Input

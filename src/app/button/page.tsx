@@ -18,14 +18,12 @@ export default function ButtonPage() {
         This is a simple button component. It is used to trigger actions.
       </Text>
       <Title size={3}>Usage</Title>
-      <Title size={5} halfPadding>
-        Styles
-      </Title>
+      <Title size={5}>Styles</Title>
       <Text type="paragraph">
         Button component provides a set of predefined styles for various
         situations. You can select a style via props.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
@@ -45,9 +43,7 @@ export default function ButtonPage() {
           </Beam>
         </Demo>
       </Beam>
-      <Title size={5} halfPadding>
-        Colors
-      </Title>
+      <Title size={5}>Colors</Title>
       <Text type="paragraph">
         Button component provides a set of predefined colors. Basically,
         it&apos;s designed to be used with the following colors:
@@ -61,7 +57,7 @@ export default function ButtonPage() {
         You can select color via theme prop or you can use a prop the color
         name.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
@@ -83,15 +79,13 @@ export default function ButtonPage() {
           </Beam>
         </Demo>
       </Beam>
-      <Title size={5} halfPadding>
-        Buttons with icons
-      </Title>
+      <Title size={5}>Buttons with icons</Title>
       <Text type="paragraph">
         You can add an icon to the button. It can be placed at the beginning or
         at the end of the button. Icon is using a same logic as in the Icon
         component. You also can change a size of the icon.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           code={`
         <Beam contentJustify="center">
@@ -118,7 +112,7 @@ export default function ButtonPage() {
         You also can use button with only an icon, and even remove a background
         of the button.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           code={`
         <Beam contentJustify="center">
@@ -134,14 +128,12 @@ export default function ButtonPage() {
           </Beam>
         </Demo>
       </Beam>
-      <Title size={5} halfPadding>
-        Sizes
-      </Title>
+      <Title size={5}>Sizes</Title>
       <Text type="paragraph">
         By default, the button has a content defined size. But you can use a
         wide prop to make it take all available horizontal space.
       </Text>
-      <Beam bottomGap>
+      <Beam>
         <Demo
           whole
           code={`
