@@ -121,6 +121,25 @@
   --margin-distant: var(--gap-distant);
   --margin-extra-distant: var(--gap-extra-distant);
   /* inner spacing */
+  --padding-xxs: 0.25rem;
+  --padding-xs: 0.5rem;
+  --padding-sm: 0.625rem;
+  --padding-s: 0.875rem;
+  --padding-md: 1rem;
+  --padding-m: 1.125rem;
+  --padding-lg: 1.5rem;
+  --padding-l: 1.875rem;
+  --padding-xl: 2.5rem;
+  /* inner spacing by types */
+  --padding-action: var(--padding-xs) var(--padding-lg);
+  --padding-action-small: var(--padding-xxs) var(--padding-lg);
+  --padding-form: var(--padding-xs) var(--padding-md);
+  --padding-form-large: var(--padding-s) var(--padding-md);
+  --padding-panel-tiny: var(--padding-sm) var(--padding-xs);
+  --padding-panel: var(--padding-s) var(--padding-m);
+  --padding-card-small: var(--padding-sm) var(--padding-lg);
+  --padding-card: var(--padding-m) var(--padding-l);
+  --padding-notice: var(--padding-s) var(--padding-xl);
   /* Endregion basic spacing rule */
 }
 
