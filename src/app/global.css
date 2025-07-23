@@ -16,8 +16,6 @@
   --width-gap-11\/12: calc(100% * 11 / 12 - (12 - 11) * (1.25rem / 12));
 
   --gap-almost-same: 0.25rem;
-  --gap-close: 0.5rem;
-  --gap-same-level: 1.25rem;
   --gap-other-level: 2rem;
   --gap-other-level-large: 3.75rem;
   --gap-same: unset;
@@ -107,6 +105,23 @@
   --z-index-top: 2000;
 
   --radius-button: 5rem;
+
+  /* Region basic spacing rule */
+  /* outer spacing */
+  --gap-none: 0; /* same elements */
+  --gap-tight: 0.25rem; /* almost same elements, like icon and text */
+  --gap-close: 0.5rem; /* very close elements, like checkbox and label */
+  --gap-same-level: 1.25rem; /* same level elements, like two inputs in the form */
+  --gap-distant: 2rem; /* distant elements, like two sections in the page */
+  --gap-extra-distant: 3.75rem; /* extra distant elements, like two sections in the page far away */
+  --margin-none: var(--gap-none);
+  --margin-tight: var(--gap-tight);
+  --margin-close: var(--gap-close);
+  --margin-same-level: var(--gap-same-level);
+  --margin-distant: var(--gap-distant);
+  --margin-extra-distant: var(--gap-extra-distant);
+  /* inner spacing */
+  /* Endregion basic spacing rule */
 }
 
 /*
