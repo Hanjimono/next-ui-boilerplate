@@ -107,39 +107,58 @@
   --radius-button: 5rem;
 
   /* Region basic spacing rule */
+  /* padding steps */
+  --padding-step-tiny: 0.25rem;
+  --padding-step-xs: 0.5rem;
+  --padding-step-2xs: 0.625rem;
+  --padding-step-3xs: 0.875rem;
+  --padding-step-sm: 1rem;
+  --padding-step-2sm: 1.125rem;
+  --padding-step-md: 1.25rem;
+  --padding-step-lg: 1.5rem;
+  --padding-step-2lg: 1.875rem;
+  --padding-step-xl: 2rem;
+  --padding-step-2xl: 2.5rem;
+  --padding-step-3xl: 3rem;
+  --padding-step-4xl: 3.5rem;
   /* outer spacing */
   --gap-none: 0; /* same elements */
-  --gap-tight: 0.25rem; /* almost same elements, like icon and text */
-  --gap-close: 0.5rem; /* very close elements, like checkbox and label */
-  --gap-same-level: 1.25rem; /* same level elements, like two inputs in the form */
-  --gap-distant: 2rem; /* distant elements, like two sections in the page */
-  --gap-extra-distant: 3.75rem; /* extra distant elements, like two sections in the page far away */
+  --gap-tight: var(
+    --padding-step-tiny
+  ); /* almost same elements, like icon and text */
+  --gap-close: var(
+    --padding-step-xs
+  ); /* very close elements, like checkbox and label */
+  --gap-same-level-close: var(
+    --padding-step-2sm
+  ); /* same level elements, like two inputs in the form, but more close than usual */
+  --gap-same-level: var(
+    --padding-step-md
+  ); /* same level elements, like two inputs in the form */
+  --gap-distant: var(
+    --padding-step-2xl
+  ); /* distant elements, like two sections in the page */
+  --gap-extra-distant: var(
+    --padding-step-4xl
+  ); /* extra distant elements, like two sections in the page far away */
   --margin-none: var(--gap-none);
   --margin-tight: var(--gap-tight);
   --margin-close: var(--gap-close);
+  --margin-same-level-close: var(--gap-same-level-close);
   --margin-same-level: var(--gap-same-level);
   --margin-distant: var(--gap-distant);
   --margin-extra-distant: var(--gap-extra-distant);
-  /* inner spacing */
-  --padding-xxs: 0.25rem;
-  --padding-xs: 0.5rem;
-  --padding-sm: 0.625rem;
-  --padding-s: 0.875rem;
-  --padding-md: 1rem;
-  --padding-m: 1.125rem;
-  --padding-lg: 1.5rem;
-  --padding-l: 1.875rem;
-  --padding-xl: 2.5rem;
   /* inner spacing by types */
-  --padding-action: var(--padding-xs) var(--padding-lg);
-  --padding-action-small: var(--padding-xxs) var(--padding-lg);
-  --padding-form: var(--padding-xs) var(--padding-md);
-  --padding-form-large: var(--padding-s) var(--padding-md);
-  --padding-panel-tiny: var(--padding-sm) var(--padding-xs);
-  --padding-panel: var(--padding-s) var(--padding-m);
-  --padding-card-small: var(--padding-sm) var(--padding-lg);
-  --padding-card: var(--padding-m) var(--padding-l);
-  --padding-notice: var(--padding-s) var(--padding-xl);
+  --padding-card: var(--padding-step-lg) var(--padding-step-2lg)
+    var(--padding-step-2xl) var(--padding-step-2lg);
+  --padding-card-small: var(--padding-step-md) var(--padding-step-lg)
+    var(--padding-step-xl) var(--padding-step-lg);
+  --padding-panel: var(--padding-step-lg) var(--padding-step-2lg);
+  --padding-panel-small: var(--padding-step-md) var(--padding-step-lg);
+  --padding-panel-tiny: var(--padding-step-tiny) var(--padding-step-xs);
+  --padding-action: var(--padding-step-xs) var(--padding-step-sm);
+  --padding-action-small: var(--padding-step-tiny) var(--padding-step-sm);
+  --padding-form-element: var(--padding-step-xs) var(--padding-step-2xs);
   /* Endregion basic spacing rule */
 }
 
