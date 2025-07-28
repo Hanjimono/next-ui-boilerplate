@@ -27,19 +27,21 @@ export default function ButtonPage() {
         <Demo
           whole
           code={`
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Button>Default</Button>
             <Button disabled>Disabled</Button>
             <Button transparent>Transparent</Button>
-            <Button text>Text Button</Button>
+            <Button isText>Text Button</Button>
+            <Button isSmall>Small Button</Button>
           </Beam>
           `}
         >
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Button>Default</Button>
             <Button disabled>Disabled</Button>
             <Button transparent>Transparent</Button>
-            <Button text>Text Button</Button>
+            <Button isText>Text Button</Button>
+            <Button isSmall>Small Button</Button>
           </Beam>
         </Demo>
       </Beam>
@@ -61,7 +63,7 @@ export default function ButtonPage() {
         <Demo
           whole
           code={`
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Button theme="primary">Primary</Button>
             <Button theme="secondary">Secondary</Button>
             <Button theme="success">Success</Button>
@@ -70,7 +72,7 @@ export default function ButtonPage() {
           </Beam>
           `}
         >
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Button theme="primary">Primary</Button>
             <Button theme="secondary">Secondary</Button>
             <Button theme="success">Success</Button>
@@ -88,14 +90,14 @@ export default function ButtonPage() {
       <Beam>
         <Demo
           code={`
-        <Beam contentJustify="center">
+        <Beam className="gap-same-level" contentJustify="center">
           <Button icon="send" success >Send</Button>
           <Button endIcon="delete" remove >Delete</Button>
           <Button icon="add" iconSize={26}>Big add</Button>
         </Beam>
         `}
         >
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Button icon="send" success>
               Send
             </Button>
@@ -115,44 +117,44 @@ export default function ButtonPage() {
       <Beam>
         <Demo
           code={`
-        <Beam contentJustify="center">
+        <Beam className="gap-same-level" contentJustify="center">
           <Button icon="send" success />
           <Button icon="add" iconSize={26} text />
         </Beam>
         `}
         >
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Button icon="send" success />
             <Button icon="delete" remove />
-            <Button icon="add" iconSize={26} text />
+            <Button icon="add" iconSize={26} isText />
           </Beam>
         </Demo>
       </Beam>
       <Title size={5}>Sizes</Title>
       <Text type="paragraph">
         By default, the button has a content defined size. But you can use a
-        wide prop to make it take all available horizontal space.
+        isWide prop to make it take all available horizontal space.
       </Text>
       <Beam>
         <Demo
           whole
           code={`
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Pillar md={4} mdOffset={1} sm={6} xs={12}>
-              <Button wide>Wide button 1</Button>
+              <Button isWide>Wide button 1</Button>
             </Pillar>
             <Pillar md={4} sm={6} xs={12}>
-              <Button wide>Wide button 2</Button>
+              <Button isWide>Wide button 2</Button>
             </Pillar>
           </Beam>
         `}
         >
-          <Beam contentJustify="center">
+          <Beam className="gap-same-level" contentJustify="center">
             <Pillar md={4} mdOffset={1} sm={6} xs={12}>
-              <Button wide>Wide button 1</Button>
+              <Button isWide>Wide button 1</Button>
             </Pillar>
             <Pillar md={4} sm={6} xs={12}>
-              <Button wide>Wide button 2</Button>
+              <Button isWide>Wide button 2</Button>
             </Pillar>
           </Beam>
         </Demo>
